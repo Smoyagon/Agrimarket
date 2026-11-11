@@ -1,8 +1,8 @@
 # AgriMarket — Maqueta inicial (HTML y CSS)
 
-Proyecto de la asignatura **Análisis y diseño de sistemas** (Ingeniería de Software, Ibero).
+Proyecto de la asignatura **Análisis y diseño de sistemas** (Ingeniería de Software, Corporación Universitaria Iberoamericana).
 
-**Equipo:** Sergio Andrés Moya González (Backend/BD) · Chesly Abby Serrano Castro (Frontend/UI) · Sergio Arturo Peña Chaparro (UX/Research)
+**Equipo:** Sergio Andrés Moya González  · Chesly Abby Serrano Castro · Sergio Arturo Peña Chaparro 
 **Docente:** Tatiana Lizbeth Cabrera Vargas
 
 ## Qué contiene
@@ -16,7 +16,7 @@ Maqueta de dos pantallas del diseño de Figma:
 Tipografías: Poppins e Inter (Google Fonts). Diseño base a 1440 px.
 
 ## Ver la maqueta
-Abre `index.html` en el navegador, o usa la versión publicada en GitHub Pages.
+Abrir `index.html` en el navegador.
 
 ## Estado
-Primera entrega: solo maquetación estática. Siguiente paso: más pantallas y conexión con la API (React / Node / PostgreSQL).
+Primera entrega: solo maquetación estática.
