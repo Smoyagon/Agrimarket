@@ -1,0 +1,108 @@
+/* AgriMarket — Maquetación inicial (Actividad 2)
+   Fiel a las pantallas "Iniciar sesión" y "Mis productos" del Figma (ancho de diseño 1440 px).
+   Tokens de color medidos sobre las capturas del Figma. */
+:root{
+  --verde:#286343;          /* primario: botones, precios, íconos */
+  --verde-hover:#1f5035;
+  --crema:#F4F0E5;          /* fondo de página */
+  --blanco:#FFFFFF;
+  --texto:#26352B;          /* texto principal */
+  --texto-2:#5C6860;        /* texto secundario */
+  --verde-claro:#6D9563;    /* etiquetas / subtítulos */
+  --sup-1:#F9F8F5;          /* superficies de campos */
+  --sup-icono:#EAF2EC;      /* fondo de íconos */
+  --borde:#D6DDD5;
+  --gris-badge:#6B7280;
+  --error:#C0392B;          /* rojo del botón Eliminar (aprox.) */
+  --error-fondo:#FDEEEC;
+  --radio-card:20px; --radio-ctrl:10px;
+  --sombra:0 4px 20px rgba(38,53,43,.08);
+}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--texto);background:var(--crema);min-height:100vh;font-size:14px}
+h1,h2,h3,.brand{font-family:'Poppins','Inter',sans-serif}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid #8FBF9F;outline-offset:2px}
+
+/* Barra de navegación */
+.nav{height:72px;background:var(--blanco);display:flex;align-items:center;justify-content:space-between;padding:0 24px;box-shadow:0 1px 6px rgba(38,53,43,.08)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:22px;color:var(--verde)}
+.brand img{width:36px;height:36px;border-radius:9px}
+.nav ul{display:flex;gap:32px;list-style:none;padding:0;font-weight:500;color:var(--verde)}
+.nav a:hover{text-decoration:underline}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 20px;border-radius:var(--radio-ctrl);font:600 14px 'Inter',sans-serif;border:1.5px solid var(--verde);cursor:pointer}
+.btn-primario{background:var(--verde);color:#fff;box-shadow:0 4px 10px rgba(40,99,67,.25)}
+.btn-primario:hover{background:var(--verde-hover)}
+.btn-secundario{background:#fff;color:var(--verde)}
+.btn-peligro{background:var(--error-fondo);color:var(--error);border-color:#F1B8B1}
+.btn-sm{height:36px;padding:0 14px;font-weight:500}
+.btn-bloque{width:100%}
+
+/* ---------- Login ---------- */
+.centro{display:flex;justify-content:center;padding:160px 16px}
+.login{width:500px;max-width:100%;background:#fff;border-radius:var(--radio-card);padding:32px 20px 28px;box-shadow:var(--sombra);text-align:center}
+.login .logo{width:40px;height:40px;border-radius:10px;margin-bottom:14px}
+.login h1{font-size:28px;font-weight:600}
+.login .sub{color:var(--texto-2);margin:10px 0 28px}
+.campo{text-align:left;margin-bottom:18px}
+.campo .fila{display:flex;justify-content:space-between;align-items:baseline}
+.campo label{font-size:13px;font-weight:500;display:block;margin-bottom:8px}
+.campo a{font-size:13px;color:var(--verde);text-decoration:underline}
+.input{display:flex;align-items:center;gap:10px;height:44px;padding:0 12px;background:#fff;border:1.5px solid var(--borde);border-radius:var(--radio-ctrl);color:var(--texto-2)}
+.input svg{flex:none;color:var(--verde)}
+.input input{flex:1;border:0;outline:0;font:15px 'Inter',sans-serif;background:transparent;color:var(--texto)}
+.input:focus-within{border-color:var(--verde);box-shadow:0 0 0 3px rgba(40,99,67,.15)}
+.separador{display:flex;align-items:center;gap:14px;color:var(--texto-2);margin:18px 0 12px;font-size:12px}
+.separador::before,.separador::after{content:"";flex:1;height:1px;background:var(--borde)}
+.pie-login{color:var(--texto-2)}
+.pie-login a{color:var(--verde);font-weight:600;text-decoration:underline}
+
+/* ---------- Mis productos ---------- */
+.contenedor{max-width:1328px;margin:0 auto;padding:36px 24px 64px}
+.saludo small{display:block;letter-spacing:.08em;text-transform:uppercase;color:var(--verde-claro);font-size:12px;margin-bottom:6px}
+.saludo h1{font-size:32px;font-weight:600;padding-bottom:22px;border-bottom:1px solid var(--borde)}
+.resumen{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:32px 0 40px}
+.res{background:#fff;border-radius:var(--radio-card);padding:24px;box-shadow:var(--sombra)}
+.res .cab{display:flex;align-items:center;gap:12px;color:var(--texto-2);font-size:13px}
+.ico{width:40px;height:40px;border-radius:10px;background:var(--sup-icono);display:grid;place-items:center;color:var(--verde)}
+.res strong{display:block;font:700 40px 'Poppins',sans-serif;color:var(--verde);margin-top:14px}
+.titulo-seccion{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:24px}
+.titulo-seccion h2{font-size:20px;font-weight:600}
+.titulo-seccion p{color:var(--texto-2);font-size:13px;margin-top:4px}
+.grilla{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.prod{background:#fff;border-radius:var(--radio-card);overflow:hidden;box-shadow:var(--sombra)}
+.prod .foto{position:relative;height:220px;background-size:cover;background-position:center}
+.badge{position:absolute;left:14px;top:14px;display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;color:#fff;font-size:12px;font-weight:600}
+.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:#B7D8C2}
+.badge.activo{background:var(--verde)}
+.badge.inactivo{background:var(--gris-badge)}
+.prod .cuerpo{padding:22px 24px 20px}
+.prod .linea{display:flex;justify-content:space-between;align-items:flex-start}
+.prod h3{font-size:20px;font-weight:600}
+.prod .disp{color:var(--texto-2);font-size:13px;margin-top:6px}
+.precio{text-align:right;font:700 24px 'Poppins',sans-serif;color:var(--verde)}
+.precio small{display:block;font:400 12px 'Inter',sans-serif;color:var(--texto-2)}
+.prod .acciones{display:flex;justify-content:space-between;align-items:center;margin-top:18px;padding-top:18px;border-top:1px solid #EEF0EC}
+.toggle{display:flex;align-items:center;gap:12px;font-size:13px}
+.toggle button{width:38px;height:22px;border-radius:999px;border:0;background:#CBD5CE;position:relative;cursor:pointer}
+.toggle button::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;transition:.2s}
+.toggle button[aria-checked="true"]{background:var(--verde)}
+.toggle button[aria-checked="true"]::after{left:18px}
+.prod.off .precio,.prod.off h3{opacity:.8}
+.prod .btns{display:flex;gap:10px}
+.prod.off .btn-secundario{color:var(--texto-2);border-color:var(--borde)}
+footer{text-align:center;color:var(--verde-claro);padding:20px;font-size:13px;background:#fff}
+
+@media (max-width:900px){
+  .resumen,.grilla{grid-template-columns:1fr}
+  .centro{padding:64px 16px}
+}
+
+@media (max-width:600px){
+  .nav{height:auto;flex-wrap:wrap;padding:12px 16px;gap:6px 16px}
+  .brand{font-size:18px}.brand img{width:30px;height:30px}
+  .nav ul{gap:16px;font-size:13px}
+  .contenedor{padding:24px 16px 48px}
+}
